@@ -4,8 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hw-10</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- 2 -->
+    <h2 class="title">Анімації з інтервалом в 1 секунду</h2>
+    <div class="container">
+      <div class="box box-1">Розмір</div>
+      <div class="box box-2">Колір</div>
+      <div class="box box-3">Рух</div>
+    </div>
+
+    <!-- 3 -->
+    <h2 class="title">Інтерактивна гра</h2>
+
+    <!-- 4 -->
+    <h2 class="title">Контроль часу</h2>
+    <div class="form-container">
+      <form action="#" class="form">
+        <label class="label" for="input">Введіть час у секундах:</label>
+        <input
+          type="number"
+          placeholder="Введіть число тут"
+          id="input"
+          required
+        />
+        <label for="timer-btn" class="label">
+          Натисніть на кнопку, щоб через раніше вказаний Вами час, отримати
+          повідомлення😊</label
+        >
+        <button id="timer-btn" type="button">Тиць</button>
+      </form>
+      <span id="message"></span>
+    </div>
+
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>

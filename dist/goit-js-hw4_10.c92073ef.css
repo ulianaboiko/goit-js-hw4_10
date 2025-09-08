@@ -1,0 +1,92 @@
+.title {
+  color: #5a5959;
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+}
+
+.box {
+  color: #2b2a2a;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  display: flex;
+}
+
+.box-1 {
+  background-color: #cf0202;
+  transition: transform .9s ease-in-out;
+  transform: scale(1);
+}
+
+.box-2 {
+  background-color: #9f30df;
+  transition: all ease-in-out;
+}
+
+.box-3 {
+  background-color: #3ae27a;
+  transition: transform .9s ease-in;
+  transform: translate(0);
+}
+
+.box-1.size {
+  transform: scale(1.5);
+}
+
+.box-3.move {
+  transform: translate(30px, 40px);
+}
+
+.form-container {
+  padding-left: 60px;
+}
+
+.form {
+  flex-direction: column;
+  align-items: baseline;
+  gap: 15px;
+  padding-bottom: 40px;
+  display: flex;
+}
+
+.label {
+  font-size: 18px;
+}
+
+#input {
+  border-color: #00bebe;
+  border-radius: 7px;
+  width: 150px;
+  height: 30px;
+  padding: 5px;
+}
+
+#timer-btn {
+  color: #131212;
+  background-color: #ee56ee;
+  border: 2px solid #e22be2;
+  border-radius: 15px;
+  width: 100px;
+  height: 50px;
+  font-size: 17px;
+}
+
+#message {
+  padding-bottom: 200px;
+  font-size: 20px;
+}
+/*# sourceMappingURL=goit-js-hw4_10.c92073ef.css.map */

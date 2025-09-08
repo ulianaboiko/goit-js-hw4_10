@@ -684,10 +684,49 @@ const message = setInterval(()=>{
 }, 1000);
 
 },{}],"1EWHj":[function(require,module,exports,__globalThis) {
+const boxSize = document.querySelector(".box-1");
+const boxColor = document.querySelector(".box-2");
+const boxMove = document.querySelector(".box-3");
+// 1
+const changeSize = ()=>{
+    boxSize.classList.toggle("size");
+};
+setInterval(changeSize, 1000);
+// 2
+const getRandomColor = ()=>{
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    return `rgb(${r},${g},${b})`;
+};
+const setrandomColor = ()=>{
+    boxColor.style.backgroundColor = getRandomColor();
+};
+setInterval(setrandomColor, 1000);
+// 3
+const getBoxIntoMove = ()=>{
+    boxMove.classList.toggle("move");
+};
+setInterval(getBoxIntoMove, 1000);
 
 },{}],"9vBIJ":[function(require,module,exports,__globalThis) {
 
 },{}],"5jb8T":[function(require,module,exports,__globalThis) {
+const timerInput = document.querySelector("#input");
+const timerBtn = document.querySelector("#timer-btn");
+const message = document.querySelector("#message");
+const handleSetTimerBtn = ()=>{
+    const seconds = parseInt(timerInput.value);
+    if (isNaN(seconds) || seconds <= 0) {
+        alert("\u0412\u0432\u0435\u0434\u0456\u0442\u044C \u0434\u043E\u0434\u0430\u0442\u043D\u0454 \u0447\u0438\u0441\u043B\u043E");
+        return;
+    }
+    message.textContent = `\u{422}\u{430}\u{439}\u{43C}\u{435}\u{440} \u{437}\u{430}\u{43F}\u{443}\u{449}\u{435}\u{43D}\u{43E} \u{43D}\u{430} ${seconds} \u{441}\u{435}\u{43A}\u{443}\u{43D}\u{434}, \u{43F}\u{43E}\u{442}\u{456}\u{43C} \u{412}\u{438} \u{43F}\u{43E}\u{431}\u{430}\u{447}\u{438}\u{442}\u{435} \u{43F}\u{43E}\u{432}\u{456}\u{434}\u{43E}\u{43C}\u{43B}\u{435}\u{43D}\u{43D}\u{44F}!`;
+    setTimeout(()=>{
+        message.textContent = `\u{41E}\u{441}\u{44C} \u{456} \u{43F}\u{43E}\u{432}\u{456}\u{434}\u{43E}\u{43C}\u{43B}\u{435}\u{43D}\u{43D}\u{44F} :) \u{41F}\u{440}\u{43E}\u{439}\u{448}\u{43B}\u{43E} ${seconds} \u{441}\u{435}\u{43A}\u{443}\u{43D}\u{434}!`;
+    }, seconds * 1000);
+};
+timerBtn.addEventListener("click", handleSetTimerBtn);
 
 },{}]},["6DHTQ","6kb64"], "6kb64", "parcelRequirea2a3", {})
 
