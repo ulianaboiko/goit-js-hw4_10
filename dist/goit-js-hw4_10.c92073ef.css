@@ -51,6 +51,47 @@
   transform: translate(30px, 40px);
 }
 
+.game-area {
+  background: #fdd1d1;
+  border: 1px solid #d45555;
+  border-radius: 20px;
+  width: 500px;
+  height: 400px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.score, .timer {
+  text-align: center;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.click-btn {
+  cursor: pointer;
+  background-color: #dc143c;
+  border: 1px solid wheat;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 20px;
+  position: absolute;
+}
+
+.click-btn--1 {
+  top: 20px;
+  left: 25px;
+}
+
+.click-btn--2 {
+  top: 200px;
+  left: 70px;
+}
+
+.click-btn--3 {
+  bottom: 15px;
+  right: 10px;
+}
+
 .form-container {
   padding-left: 60px;
 }

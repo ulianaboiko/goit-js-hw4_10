@@ -710,6 +710,37 @@ const getBoxIntoMove = ()=>{
 setInterval(getBoxIntoMove, 1000);
 
 },{}],"9vBIJ":[function(require,module,exports,__globalThis) {
+const gameArea = document.querySelector(".game-area");
+const gameScore = document.querySelector(".score");
+const gameTimer = document.querySelector(".timer");
+const clickBtn = document.querySelectorAll(".click-btn");
+let score = 0;
+let timeLeft = 20;
+let timer;
+const startGame = ()=>{
+    score = 0;
+    timeLeft = 20;
+    gameScore.textContent = "\u041E\u0447\u043A\u0438: 0";
+    gameTimer.textContent = "\u0427\u0430\u0441: 20";
+    clickBtn.forEach((btn)=>btn.disabled = false);
+    timer = setInterval(()=>{
+        timeLeft--;
+        gameTimer.textContent = `\u{427}\u{430}\u{441}: ${timeLeft}`;
+        if (timeLeft <= 0) endGame();
+    }, 1000);
+};
+const endGame = ()=>{
+    clearInterval(timer);
+    clickBtn.forEach((btn)=>btn.disabled = true);
+    alert(`\u{427}\u{430}\u{441} \u{432}\u{438}\u{439}\u{448}\u{43E}\u{432}! \u{412}\u{438} \u{43D}\u{430}\u{431}\u{440}\u{430}\u{43B}\u{438}: ${score}  \u{43E}\u{447}\u{43E}\u{43A}`);
+};
+clickBtn.forEach((btn)=>{
+    btn.addEventListener("click", ()=>{
+        score++;
+        gameScore.textContent = `\u{41E}\u{447}\u{43A}\u{438}: ${score}`;
+    });
+});
+startGame();
 
 },{}],"5jb8T":[function(require,module,exports,__globalThis) {
 const timerInput = document.querySelector("#input");
